@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Rubik", sans-serif;
+    background-color: var(--Very-dark-blue);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Softblue-play: hsl(195, 74%, 62%);
+    --Lightred-study: hsl(348, 100%, 68%);
+    --Limegreen-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Softorange-selfcare: hsl(43, 84%, 65%);
+}
+.container{
+    display: flex;
+    /* width: 58vw; */
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+    /* padding: 25px; */
+    background-color: var(--Dark-blue);
+    border-radius: 12px;
+}
+.profile{
+    background-color: var(--Blue);
+    padding: 20px;
+    border-radius: 8px;
+}
+.profile img{
+    width: 50px;
+    margin-bottom: 20px;
+}
+.profile p{
+    font-size: 0.6rem;
+    color: var(--Pale-Blue);
+}
+.profile h1{
+    font-weight: lighter;
+    font-size: 1.6rem; 
+    margin-bottom: 20px;
+}
+.timePeriod{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    font-size: 0.8rem;
+}
+.timePeriod p{
+    font-weight: lighter;
+    cursor: pointer;
+    color: var(--Pale-Blue);
+}
+.timePeriod p:hover, .timePeriod p:visited{
+    color: white;
+}
+.work{
+    position: relative;
+    width: 170px;
+    height: 143px;
+}
+.work_background{
+    background-color: var(--Light-red-work);
+}
+.play_background{
+    background-color: var(--Softblue-play);
+}
+.study_background{
+    background-color: var(--Lightred-study);
+}
+.exercise_background{
+    background-color: var(--Limegreen-exercise);
+}
+.social_background{
+    background-color: var(--Violet-social);
+}
+.care_background{
+    background-color: var(--Softorange-selfcare);
+}
+.background{
+    border-radius: 8px;
+    display: flex;
+    padding-inline: 7px;
+    justify-content: flex-end;
+    height: 50px;
+}
+.background img{
+    width: 37px;
+    height: 33px;
+}
+.foreground{
+    background-color: var(--Dark-blue);
+    border-radius: 8px;
+    position: absolute;
+    top: 23px;
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+}
+.foreground:hover{
+    background-color: var(--Desaturated-blue);
+}
+.fstline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+.fstline svg{
+    width: 25px;
+    height: 6px;
+    cursor: pointer;
+    /* padding: 2px; */
+    fill: #BBC0FF; 
+}
+.fstline svg:hover{
+    fill: white;
+}
+.foreground h2{
+    font-weight: lighter;
+}
+.foreground > p{
+    color: var(--Pale-Blue);
+    font-size: 0.4rem;
+    padding-top: 4px;
+}
+.dashboard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 768px) {
+    body{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        margin-top: 30px;
+        width: 90%;
+        flex-direction: column;
+    }
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+    }
+    .work{
+        position: relative;
+        width: 100%;
+        height: 143px;
+    }
+    .user{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .timePeriod{
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        font-size: 0.8rem;
+        justify-content: space-around;
+    }
+    .profile{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+    }
+}
